@@ -2,6 +2,11 @@
 
 This project is initialized with [Ant Design Pro](https://pro.ant.design). Follow is the quick guide for how to use.
 
+
+## 项目环境
+node 版本使用 10.16.0
+ui组件库ant-design使用的是 3.23.6
+
 ## Environment Prepare
 
 Install `node_modules`:

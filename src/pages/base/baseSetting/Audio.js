@@ -1,9 +1,10 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
-import { Tabs, Card, Form, Input, Switch, Slider } from 'antd';
+import { Tabs, Card, Form, Input, Switch, Slider, Select } from 'antd';
 import defaultSettings from '../../../../config/defaultSettings';
 
 const { TabPane } = Tabs;
+const { Option } = Select;
 export default class Audio extends Component {
   constructor(props) {
     super(props);
@@ -53,13 +54,23 @@ export default class Audio extends Component {
     <div>
       <Form layout="vertical">
         <Form.Item label="场景模式">
-          <Input value="嘈杂模式" disabled />
+          <Select defaultValue="1">
+            <Option value="1">嘈杂模式</Option>
+            <Option value="2">安静模式</Option>
+            <Option value="3">无功能</Option>
+          </Select>
         </Form.Item>
         <Form.Item label="声波模式">
-          <Input value="启用" disabled />
+        <Select defaultValue="1">
+            <Option value="1">启用</Option>
+            <Option value="2">禁用</Option>
+          </Select>
         </Form.Item>
         <Form.Item label="兼容模式">
-          <Input value="平台兼容模式" disabled />
+        <Select defaultValue="1">
+            <Option value="1">NVR兼容模式</Option>
+            <Option value="2">平台兼容模式</Option>
+          </Select>
         </Form.Item>
       </Form>
     </div>
